@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="comm.aut.mybatis.mapper.EmpMapper">
+<!--emp getEmp(@Param("eid") Integer eid);-->
+<!--    <resultMap id="getMapEmp" type="emp">-->
+<!--        <id column="eid" property="eid"></id>-->
+<!--        <id column="ename" property="ename"></id>-->
+<!--        <id column="age" property="eid"></id>-->
+<!--        <id column="sex" property="eid"></id>-->
+<!--        <association property="deps"-->
+<!--                     select="comm.aut.mybatis.mapper.DepMapper"-->
+<!--                     column="did"></association>-->
+<!--    </resultMap>-->
+
+<!--    <select id="getEmp" resultMap="getMapEmp">-->
+<!--        select from emp where eid = #{eid}-->
+<!--    </select>-->
+
+    <select id="getName" resultType="emp">
+        select * from emp where eid = #{eid}
+    </select>
+
+</mapper>
